@@ -1,0 +1,55 @@
+apt-get update
+sudo apt-get update
+apt update
+sudo shutdown now
+ls -l
+curl wttr.in
+su -
+mkdir /media/VirtualBoxGuestAdditions
+sudo mmkdir /media/VirtualBoxGuestAdditions
+mkdir /media/VirtualBoxGuestAdditions
+sudo mkdir /media/VirtualBoxGuestAdditions
+mount -r /dev/cdrom /media/VirtualBoxGuestAdditions
+sudo mount -r /dev/cdrom /media/VirtualBoxGuestAdditions
+sudo rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+sudo rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
+yum install gcc kernel-devel kernel-headers dkms make bzip2 perl
+sudo yum install gcc kernel-devel kernel-headers dkms make bzip2 perl 
+sudo KERN_DIR=/usr/src/kernels/`uname -r`/build
+uname -r
+KERN_DIR=/usr/src/kernels/3.10.0-862.11.6.el7.x86_64/build
+export KERN_DIR
+showenv | KERN_DIR
+printenv|KERN_DIR
+printenv | KERN_DIR
+printenv
+cd media
+dir
+cd ../
+dir
+cd ../
+dir
+cd media/
+cd VirtualBoxGuestAdditions/
+dir
+./VBoxLinuxAdditions.run 
+sudo ./VBoxLinuxAdditions.run 
+reboot
+ifconfig
+history
+nautilus
+cd ../
+cd ./
+cd ../
+dir
+cd home/
+dir
+cd adman/
+dir
+echo $HISFILE
+history
+echo $HISTFILE
+cat bash_history
+cat ./bash_history
+cat .bash_history
+sudo yum install git
