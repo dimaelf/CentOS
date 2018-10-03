@@ -1,0 +1,10 @@
+.:
+total 4
+drw-rw-rw-. 2 adman adman 22 Oct  3 22:37 dir
+-rw-rw----. 1 root  adman  5 Oct  3 22:35 file
+-rw-------. 1 adman adman  0 Oct  3 22:52 file1
+-rw-rw-rw-. 1 adman adman  0 Oct  3 22:53 file2
+
+./dir:
+total 0
+-????????? ? ? ? ?            ? new_file

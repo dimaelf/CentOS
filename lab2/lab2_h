@@ -1,0 +1,36 @@
+    3  sudo -i
+    4  cd ~
+    5  mkdir test
+    6  cd test
+    7  touch file
+    8  ls -l
+    9  chmod 000 file
+   10  echo "test" >> file
+   11  cat file
+   12  chmod 400 file
+   13  ll
+   14  chmod 200
+   15  chmod 200 file
+   16  ll
+   17  echo "test" >> file
+   18  cat file
+   19  chmod 240 file
+   20  ll
+   21  cat file
+   22  chmod 640 file
+   23  cat file
+   24  mkdir dir
+   25  echo "file 2" >> dir/new_file
+   26  chmod 666 dir
+   27  cat dir/new_file 
+   28  rm dir/new_file 
+   29  man chown
+   30  chown root file
+   31  chown :root file
+   32  umask 077
+   33  touch file1
+   34  ll
+   35  umask 0000
+   36  touch file2
+   37  ll
+   38  cat file
