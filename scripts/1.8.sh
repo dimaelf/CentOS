@@ -1,9 +1,11 @@
 #!/bin/bash
 
 echo "Процессов пользователя:"
-whoami
+US=""
+US=$(whoami)
+echo $US
 
-ps aux | grep adman
+ps -f -U $US
 echo ""
 echo "Процессов пользователя root:"
-ps aux | grep ^root
+ps -f -U root
