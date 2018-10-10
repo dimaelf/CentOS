@@ -9,3 +9,4 @@ echo "size:"
 stat -c '%s' $F
 echo "lines:"
 wc -l < $F
+rm "$F"
