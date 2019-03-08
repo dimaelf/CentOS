@@ -1,0 +1,81 @@
+  906  ldd /bin/ls | grep selinux
+  907  ls -l /etc/selinux/
+  908  ls -l /etc/selinux/targeted/
+  909  vi /etc/selinux/config 
+  910  sestatus
+  911  getenforce
+  912  cat /sys/fs/selinux/enforce 
+  913  sudo vi /etc/selinux/config 
+  914  sudo reboot
+  915  getenforce
+  916  sestatus
+  917  cat /sys/fs/selinux/enforce 
+  918  sudo vi /etc/selinux/config 
+  919  sudo reboot
+  920  getenforce
+  921  sestatus
+  922  cat /sys/fs/selinux/enforce 
+  923  sudo vi /etc/selinux/config 
+  924  sudo reboot
+  925  seenforce 1
+  926  setenforce 1
+  927  sudo setenforce 1
+  928  getenforce
+  929  setenforce 0
+  930  sudo setenforce 0
+  931  getenforce
+  932  sudo setenforce 1
+  933  sudo echo 0 > /sys/fs/selinux/enforce 
+  934  sudo echo 1 > /sys/fs/selinux/enforce 
+  935  su
+
+   42  echo 1 > /proc/sys/kernel/sched_child_runs_first
+   43  vim /proc/sys/kernel/sched_child_runs_first
+   44  exit
+   45  echo 0 > /proc/sys/kernel/sched_child_runs_first
+   46  exit
+   47  echo 0 > /sys/fs/selinux/enforce 
+   48  getenforce
+   49  echo 1 > /sys/fs/selinux/enforce 
+   50  getenforce
+   51  exit
+
+  958  sudo vi /boot/config-3.10.0-862.el7.x86_64 
+  959  cat /boot/config-3.10.0-862.el7.x86_64 | grep CONFIG_SECURITY_SELINUX_DEVELOP
+  960  cat /boot/config-3.10.0-862.14.4.el7.x86_64 | grep CONFIG_SECURITY_SELINUX_DEVELOP
+  961  cat /boot/config-3.10.0-862.14.4.el7.x86_64 | grep ONFIG_SECURITY_SELINUX_BOOTPARAM
+  962  cat /boot/config-3.10.0-862.el7.x86_64 | grep ONFIG_SECURITY_SELINUX_BOOTPARAM
+  963  seinfo
+ 1002  sudo yum install setools-console
+ 1003  seinfo
+ 1004  seinfo -cfile -x
+ 1005  seinfo -cdir -x
+ 1006  seinfo -cblk_file -x
+ 1007  seinfo -cchr_file -x
+ 1008  seinfo -clnh_file -x
+ 1009  seinfo -clnk_file -x
+ 1010  seinfo -cfifo_file -x
+ 1011  seinfo -csock_file -x
+ 1012  seinfo -cfilesystem -x
+ 1013  sudo cat /etc/selinux/targeted/contexts/files/file_contexts.homedirs
+ 1014  sudo semanage fcontext -l
+ 1015  touch sel.txt
+ 1016  ls -z sel.txt 
+ 1017  ls -Z sel.txt 
+ 1018  ls -Z ./
+ 1019  cd ../
+ 1020  dir
+ 1021  ls -Z
+ 1022  sesearch -T -s httpd_t -t var_log_t
+ 1023  sesearch -T -s httpd_t -t tmp_t
+ 1024  cd ~
+ 1025  ls -Z
+ 1026  cp ~/sel.txt /bin/
+ 1027  sudo cp ~/sel.txt /bin/
+ 1028  ls -Z /bin/ | grep sel
+ 1029  sudo mv ~/sel.txt /bin/sel.txt
+ 1030  ls -Z /bin/ | grep sel
+ 1031  rm sel.txt
+ 1032  sudo /bin/rm sel.txt
+ 1033  sudo rm /bin/sel.txt
+ 1034  ls -Z /bin/ | grep sel
